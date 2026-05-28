@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support Locations - AssistAbility</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;1,400&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* ── Page layout ── */
+        .locations-page { display: flex; flex-direction: column; min-height: 100vh; }
+
+        /* ── Hero banner ── */
+        .locations-hero {
+            background: linear-gradient(140deg, #1a3a6b 0%, #2d6abf 55%, #4a90e2 100%);
+            padding: 4rem 2rem 3rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .locations-hero::before {
+            content: '';
+            position: absolute; top: -60px; right: -60px;
+            width: 280px; height: 280px; border-radius: 50%;
+            background: rgba(255,255,255,0.06);
+        }
+        .locations-hero::after {
+            content: '';
+            position: absolute; bottom: -40px; left: -40px;
+            width: 180px; height: 180px; border-radius: 50%;
+            background: rgba(255,255,255,0.05);
+        }
+        .locations-hero-inner { max-width: var(--max-width); margin: 0 auto; position: relative; z-index: 1; }
+        .locations-hero .hero-badge { background: rgba(255,255,255,0.18); color: #fff; }
+        .locations-hero-title {
+            font-family: var(--font-display);
+            font-size: clamp(2rem, 4vw, 3rem);
+            color: #fff; line-height: 1.2; margin-bottom: 1rem;
+        }
+        .locations-hero-title em { font-style: italic; opacity: 0.85; }
+        .locations-hero-sub {
+            color: rgba(255,255,255,0.78); font-size: 1rem; max-width: 520px;
+            margin: 0 auto 1.5rem; line-height: 1.8;
+        }
+
+        /* ── Main content ── */
+        .locations-main {
+            flex: 1;
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 3rem 2rem;
+            width: 100%;
+        }
+
+        /* ── Section header ── */
+        .loc-section-header { margin-bottom: 2rem; }
+        .loc-section-eyebrow {
+            font-size: 0.8rem; font-weight: 600; text-transform: uppercase;
+            letter-spacing: 0.07em; color: var(--blue); margin-bottom: 0.4rem;
+        }
+        .loc-section-title {
+            font-family: var(--font-display);
+            font-size: clamp(1.5rem, 2.5vw, 2rem);
+            color: var(--text); margin-bottom: 0.4rem;
+        }
+        .loc-section-sub { font-size: 0.92rem; color: var(--text-muted); }
+
+        /* ── Map embed ── */
+        .map-wrap {
+            width: 100%; height: 420px;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            border: 1px solid var(--border);
+            margin-bottom: 3rem;
+            background: var(--bg-soft);
+        }
+        .map-wrap iframe { width: 100%; height: 100%; border: none; display: block; }
+
+        /* ── Location cards grid ── */
+        .loc-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.25rem;
+        }
+
+        .loc-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            padding: 1.5rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: flex; flex-direction: column; gap: 0.75rem;
+        }
+        .loc-card:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .loc-card-top { display: flex; align-items: flex-start; gap: 0.9rem; }
+
+        .loc-icon-wrap {
+            width: 44px; height: 44px; flex-shrink: 0;
+            border-radius: var(--radius-sm);
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.3rem;
+        }
+        .loc-icon-wrap.blue  { background: var(--blue-light); }
+        .loc-icon-wrap.green { background: #eaf4ec; }
+        .loc-icon-wrap.amber { background: #fef6e4; }
+        .loc-icon-wrap.red   { background: #fdeef0; }
+
+        .loc-name {
+            font-size: 1rem; font-weight: 600; color: var(--text);
+            line-height: 1.35;
+        }
+        .loc-type {
+            display: inline-block; margin-top: 4px;
+            font-size: 0.75rem; font-weight: 500; padding: 2px 10px;
+            border-radius: 100px; letter-spacing: 0.03em;
+        }
+        .loc-type.deaf    { background: #e8f1fb; color: #2d6abf; }
+        .loc-type.blind   { background: #fef6e4; color: #a37200; }
+        .loc-type.mental  { background: #eaf4ec; color: #246b30; }
+        .loc-type.umbrella{ background: #f0effe; color: #5340c4; }
+        .loc-type.health  { background: #fdeef0; color: #b53a4a; }
+        .loc-type.physical{ background: #e4f5f0; color: #0e6e56; }
+
+        .loc-divider { height: 1px; background: var(--border); }
+
+        .loc-meta { display: flex; flex-direction: column; gap: 0.45rem; }
+        .loc-meta-row {
+            display: flex; align-items: flex-start; gap: 8px;
+            font-size: 0.85rem; color: var(--text-muted); line-height: 1.5;
+        }
+        .loc-meta-icon { font-size: 1rem; flex-shrink: 0; margin-top: 1px; }
+
+        .loc-card-footer { margin-top: auto; padding-top: 0.5rem; }
+        .loc-map-btn {
+            display: inline-flex; align-items: center; gap: 6px;
+            font-size: 0.85rem; font-weight: 500; color: var(--blue);
+            padding: 7px 14px;
+            border: 1.5px solid var(--border);
+            border-radius: var(--radius-sm);
+            transition: background 0.2s, border-color 0.2s;
+            cursor: pointer; text-decoration: none;
+        }
+        .loc-map-btn:hover { background: var(--blue-light); border-color: var(--blue); }
+
+        /* ── Info banner ── */
+        .loc-info-banner {
+            margin-top: 3rem;
+            background: var(--blue-light);
+            border: 1px solid #c3d9f4;
+            border-radius: var(--radius-md);
+            padding: 1.25rem 1.5rem;
+            display: flex; align-items: flex-start; gap: 1rem;
+        }
+        .loc-info-icon { font-size: 1.5rem; flex-shrink: 0; }
+        .loc-info-text { font-size: 0.9rem; color: #1a3a6b; line-height: 1.7; }
+        .loc-info-text strong { font-weight: 600; }
+
+        /* ── Responsive ── */
+        @media (max-width: 640px) {
+            .map-wrap { height: 280px; }
+            .loc-grid { grid-template-columns: 1fr; }
+            .locations-main { padding: 2rem 1.25rem; }
+        }
+    </style>
+</head>
+<body class="locations-page">
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo">
+                <span class="logo-icon">♿</span>
+                AssistAbility
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="location.html" class="nav-link active">Locations</a></li>
+                <li><a href="visual aids.html" class="nav-link">Visual aids</a></li>
+                <li><a href="request.html" class="nav-link">Request Help</a></li>
+            </ul>
+            <a href="request.html" class="nav-cta">Request Help</a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <div class="locations-hero">
+        <div class="locations-hero-inner">
+            <span class="hero-badge">Rwanda · Kigali</span>
+            <h1 class="locations-hero-title">
+                Find <em>support near you</em><br>across Rwanda
+            </h1>
+            <p class="locations-hero-sub">
+                A directory of verified organisations and centres providing services for persons with disabilities — from advocacy and rehabilitation to education and health.
+            </p>
+        </div>
+    </div>
+
+    <!-- Main -->
+    <main class="locations-main">
+
+        <!-- Map -->
+        <div class="loc-section-header">
+            <p class="loc-section-eyebrow">Interactive map</p>
+            <h2 class="loc-section-title">Locations in Kigali</h2>
+            <p class="loc-section-sub">All centres below are shown on the map. Click a pin for directions.</p>
+        </div>
+
+        <div class="map-wrap">
+            <!-- Centred on Kigali; includes markers for all 6 orgs via embed -->
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m56!1m12!1m3!1d63762.35!2d30.0584!3d-1.9706!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m41!3e0!4m5!1s0x19dca7b811057b6b%3A0xea3614dec02f97c7!2sNUDOR%2C%20KK%2037%20Ave%2C%20Kigali!3m2!1d-1.9843125!2d30.1054848!4m5!1s0x19dca9ade2ba3819%3A0x7135fc1992638ad!2sRwanda%20National%20Union%20of%20the%20Deaf%2C%20KK%20227%20St%2C%20Kigali!3m2!1d-1.985867!2d30.1322565!4m5!1s0x19dca9690a6ce96b%3A0x81f7a94d3568a4f7!2sTubiteho%20NGO%2C%20Kigali!3m2!1d-2.03273!2d30.0945!4m5!1s0x19dca9bcc2e3f5ad%3A0x960a2c3f2323c88!2sUPHLS%2C%20Kigali!3m2!1d-1.9500643!2d30.0831897!4m5!1s0x19dca5a5b3c66031%3A0x0da79e1a736ecc!2sRwanda%20Union%20of%20the%20Blind%2C%20Kigali!3m2!1d-1.9463909!2d30.0941743!4m5!1s0x19dca7a2f48692c3%3A0xa8bcf26699c74f0f!2sUwezo%20Youth%20Empowerment%2C%20KG%20206%20St%2C%20Kigali!3m2!1d-1.9523728!2d30.1256094!5e0!3m2!1sen!2srw!4v1690000000000"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Map of disability support centres in Kigali, Rwanda"
+            ></iframe>
+        </div>
+
+        <!-- Cards -->
+        <div class="loc-section-header">
+            <p class="loc-section-eyebrow">Directory</p>
+            <h2 class="loc-section-title">Support Organisations</h2>
+            <p class="loc-section-sub">6 verified centres and organisations across Kigali — open Mon–Fri</p>
+        </div>
+
+        <div class="loc-grid">
+
+            <!-- NUDOR -->
+            <div class="loc-card">
+                <div class="loc-card-top">
+                    <div class="loc-icon-wrap blue">🏛️</div>
+                    <div>
+                        <p class="loc-name">NUDOR – National Union of Disability Organizations</p>
+                        <span class="loc-type umbrella">Umbrella / Advocacy</span>
+                    </div>
+                </div>
+                <div class="loc-divider"></div>
+                <div class="loc-meta">
+                    <div class="loc-meta-row"><span class="loc-meta-icon">📍</span><span>KK 37 Avenue, Kagarama, Kicukiro District, Kigali</span></div>
+                    <div class="loc-meta-row"><span class="loc-meta-icon">📞</span><span>+250 788 845 444</span></div>
+                    <div class="loc-meta-row"><span class="loc-meta-icon">🕐</span><span>Mon – Fri: 8:00 AM – 5:00 PM</span></div>
+                    <div class="loc-meta-row"><span class="loc-meta-icon">ℹ️</span><span>National umbrella body coordinating 8+ disability orgs. Advocacy, rights, and policy work across all 30 districts.</span></div>
+                </div>
+                <div class="loc-card-footer">
+                    <a class="loc-map-btn" href="https://maps.google.com/?q=NUDOR,KK+37+Ave,Kigali,Rwanda" target="_blank" rel="noopener">
+                        🗺️ Open in Maps
+                    </a>
+                </div>
+            </div>
+
+            <!-- RNUD -->
+            <div class="loc-card">
+                <div class="loc-card-top">
+                    <div class="loc-icon-wrap blue">👂</div>
+                    <div>
+                        <p class="loc-name">RNUD – Rwanda National Union of the Deaf</p>
+                        <span class="loc-type deaf">Deaf / Hearing</span>
+                    </div>
+                </div>
+                <div class="loc-divider"></div>
+                <div class="loc-meta">
+                    <div class="loc-meta-row"><span class="loc-meta-icon">📍</span><span>KK 401 St, Kagarama, Kicukiro District, Kigali</span></div>
+                    <div class="loc-meta-row"><span class="loc-meta-icon">📞</span><span>+250 788 209 212 / +250 788 433 444</span></div>
+                    <div class="loc-meta-row"><span class="loc-meta-icon">🌐</span><span>rnud.org &nbsp;·&nbsp; infornud2010@rnud.org</span></div>
+                    <div class="loc-meta-row"><span class="loc-meta-icon">🕐</span><span>Mon – Fri: 9:00 AM – 5:00 PM</span></div>
+                    <div class="loc-meta-row"><span class="loc-meta-icon">ℹ️</span><span>Established 1989. Sign language services, advocacy, and representation for Deaf Rwandans. Affiliated with the World Federation of the Deaf.</span></div>
+                </div>
+                <div class="loc-card-footer">
+                    <a class="loc-map-btn" href="https://maps.google.com/?q=Rwanda+National+Union+of+the+Deaf,Kicukiro,Kigali" target="_blank" rel="noopener">
+                        🗺️ Open in Maps
+                    </a>
+                </div>
+            </div>
+
+            <!-- Tubiteho -->
+            <div class="loc-card">
+                <div class="loc-card-top">
+                    <div class="loc-icon-wrap green">🧠</div>
+                    <div>
+                        <p class="loc-name">Tubiteho – Centre de Jour</p>
+                        <span class="loc-type mental">Mental &amp; Intellectual</span>
+                    </div>
+                </div>
+                <div class="loc-divider"></div>
+                <div class="loc-meta">
+                    <div class="loc-meta-row"><span class="loc-meta-icon">📍</span><span>Gahanga Sector, Kicukiro District, Kigali</span></div>
+                    <div class="loc-meta-row"><span class="loc-meta-icon">🌐</span><span>tubiteho.org</span></div>
+                    <div class="loc-meta-row"><span class="loc-meta-icon">ℹ️</span><span>Day centre for persons with mental and intellectual disabilities. Offers special education, health services, counselling, and anti-stigma advocacy.</span></div>
+                </div>
+                <div class="loc-card-footer">
+                    <a class="loc-map-btn" href="https://maps.google.com/?q=Tubiteho+NGO,Gahanga,Kicukiro,Kigali" target="_blank" rel="noopener">
+                        🗺️ Open in Maps
+                    </a>
+                </div>
+            </div>
+
+            <!-- UPHLS -->
+            <div class="loc-card">
+                <div class="loc-card-top">
+                    <div class="loc-icon-wrap red">🏥</div>
+                    <div>
+                        <p class="loc-name">UPHLS – Umbrella of Disability Orgs for Health</p>
+                        <span class="loc-type health">Health &amp; HIV</span>
+                    </div>
+                </div>
+                <div class="loc-divider"></div>
+                <div class="loc-meta">
+                    <div class="loc-meta-row"><span class="loc-meta-icon">📍</span><span>Kigali (operates in 30 districts nationwide)</span></div>
+                    <div class="loc-meta-row"><span class="loc-meta-icon">📞</span><span>+250 788 344 553</span></div>
+                    <div class="loc-meta-row"><span class="loc-meta-icon">🌐</span><span>uphls.org</span></div>
+                    <div class="loc-meta-row"><span class="loc-meta-icon">ℹ️</span><span>Founded 2006. Focuses on HIV/AIDS prevention, inclusive health policies, and employability for persons with disabilities across Rwanda.</span></div>
+                </div>
+                <div class="loc-card-footer">
+                    <a class="loc-map-btn" href="https://maps.google.com/?q=UPHLS,Kigali,Rwanda" target="_blank" rel="noopener">
+                        🗺️ Open in Maps
+                    </a>
+                </div>
+            </div>
+
+            <!-- Rwanda Union of the Blind -->
+            <div class="loc-card">
+                <div class="loc-card-top">
+                    <div class="loc-icon-wrap amber">👁️</div>
+                    <div>
+                        <p class="loc-name">RUB – Rwanda Union of the Blind</p>
+                        <span class="loc-type blind">Visual Impairment</span>
+                    </div>
+                </div>
+                <div class="loc-divider"></div>
+                <div class="loc-meta">
+                    <div class="loc-meta-row"><span class="loc-meta-icon">📍</span><span>Kigali Poids Lourd Road, Kigali</span></div>
+                    <div class="loc-meta-row"><span class="loc-meta-icon">📞</span><span>+250 788 856 671</span></div>
+                    <div class="loc-meta-row"><span class="loc-meta-icon">🕐</span><span>Mon – Fri: 8:00 AM – 5:00 PM</span></div>
+                    <div class="loc-meta-row"><span class="loc-meta-icon">ℹ️</span><span>National organisation advocating for persons with visual impairments. Services include mobility support, Braille resources, and socioeconomic empowerment.</span></div>
+                </div>
+                <div class="loc-card-footer">
+                    <a class="loc-map-btn" href="https://maps.google.com/?q=Rwanda+Union+of+the+Blind,Kigali" target="_blank" rel="noopener">
+                        🗺️ Open in Maps
+                    </a>
+                </div>
+            </div>
+
+            <!-- Uwezo -->
+            <div class="loc-card">
+                <div class="loc-card-top">
+                    <div class="loc-icon-wrap green">🤝</div>
+                    <div>
+                        <p class="loc-name">Uwezo Youth Empowerment</p>
+                        <span class="loc-type physical">Physical / Youth</span>
+                    </div>
+                </div>
+                <div class="loc-divider"></div>
+                <div class="loc-meta">
+                    <div class="loc-meta-row"><span class="loc-meta-icon">📍</span><span>39 KG 206 St, Gasabo District, Kigali</span></div>
+                    <div class="loc-meta-row"><span class="loc-meta-icon">📞</span><span>+250 783 285 228</span></div>
+                    <div class="loc-meta-row"><span class="loc-meta-icon">🕐</span><span>Mon – Fri: 8:00 AM – 5:00 PM</span></div>
+                    <div class="loc-meta-row"><span class="loc-meta-icon">ℹ️</span><span>Youth-focused empowerment centre supporting young persons with physical disabilities through vocational training and community integration.</span></div>
+                </div>
+                <div class="loc-card-footer">
+                    <a class="loc-map-btn" href="https://maps.google.com/?q=Uwezo+Youth+Empowerment,KG+206+St,Kigali" target="_blank" rel="noopener">
+                        🗺️ Open in Maps
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Info note -->
+        <div class="loc-info-banner">
+            <span class="loc-info-icon">ℹ️</span>
+            <p class="loc-info-text">
+                <strong>Need help outside Kigali?</strong> NUDOR and UPHLS operate programmes across all 30 districts of Rwanda. Contact NUDOR at <strong>+250 788 845 444</strong> to be connected to the nearest local organisation in your area. You can also <a href="request.html" style="color:#2d6abf; font-weight:600;">submit a help request</a> and our team will follow up.
+            </p>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <span class="footer-logo">♿ AssistAbility</span>
+            <p class="footer-text">Connecting persons with disabilities to support across Rwanda.</p>
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="location.html">Locations</a>
+                <a href="visual aids.html">Visual aids</a>
+                <a href="request.html">Request Help</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
