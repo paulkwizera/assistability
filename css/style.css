@@ -1,0 +1,93 @@
+/* Simple, tidy stylesheet for classroom use */
+* { box-sizing: border-box; margin: 0; padding: 0 }
+html, body { height: 100% }
+
+:root {
+  --primary: #2563eb; /* blue */
+  --text: #111827;
+  --muted: #6b7280;
+  --bg: #ffffff;
+  --surface: #f8fafc;
+  --radius: 8px;
+  --max-width: 1000px;
+}
+
+body {
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.5;
+  font-size: 16px;
+}
+
+/* Containers */
+.nav-inner, .section-inner, .footer-inner { max-width: var(--max-width); margin: 0 auto; padding: 0 1rem }
+
+/* Navbar */
+.navbar { background: var(--bg); border-bottom: 1px solid #eef2f7 }
+.nav-inner { height: 64px; display: flex; align-items: center; gap: 1rem }
+.nav-logo { font-weight: 700; color: var(--primary) }
+.nav-links { margin-left: auto; display: flex; gap: .5rem }
+.nav-link { padding: .35rem .7rem; border-radius: 6px; color: var(--muted) }
+.nav-link:hover, .nav-link.active { color: var(--primary); background: var(--surface) }
+.nav-cta { margin-left: 1rem; padding: .45rem .9rem; background: var(--primary); color: #fff; border-radius: 6px }
+
+/* Hero */
+.hero { max-width: var(--max-width); margin: 0 auto; padding: 3rem 1rem; display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; align-items: center }
+.hero-title { font-family: Georgia, 'Times New Roman', serif; font-size: 2.2rem; margin-bottom: .5rem }
+.hero-subtitle { color: var(--muted); max-width: 480px }
+.hero-image img { width: 100%; border-radius: 10px; display: block }
+
+/* Cards / grids */
+.cards-grid, .video-grid, .loc-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem }
+.card, .video-card, .loc-card { background: #fff; border: 1px solid #eef2f7; border-radius: var(--radius); padding: 1rem }
+.card-title, .video-title { font-weight: 600; margin-bottom: .5rem }
+
+/* Buttons */
+.btn { display: inline-block; padding: .55rem .9rem; border-radius: 6px; background: var(--surface); color: var(--primary); text-decoration: none }
+.btn-primary { background: var(--primary); color: #fff }
+
+/* Sections */
+.section { padding: 2.25rem 0 }
+.section-title { font-size: 1.25rem; font-weight: 700; margin-bottom: .5rem }
+
+/* Forms */
+.form-container { max-width: 520px; margin: 0 auto }
+label { display: block; margin-bottom: .4rem; font-size: .95rem }
+input[type=text], input[type=email], select, textarea { width: 100%; padding: .6rem; border: 1px solid #e6eef8; border-radius: 6px; background: #fff }
+textarea { min-height: 110px; resize: vertical }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem }
+
+/* Request page split layout: image left, form right */
+.request-split { display: grid; grid-template-columns: 1fr 1fr; gap: 0; min-height: calc(100vh - 64px); }
+.request-panel-left { background: var(--surface); padding: 1.5rem; display: flex; flex-direction: column; justify-content: center; gap: 1rem }
+.panel-image-wrap { width: 100%; height: 320px; overflow: hidden; border-radius: 8px }
+.panel-image-wrap img { width: 100%; height: 100%; object-fit: cover; display: block }
+.panel-content { padding-top: .6rem }
+.request-panel-right { display: flex; align-items: center; padding: 2rem }
+
+
+/* Table */
+.alphabet-table { width: 100%; border-collapse: collapse; border: 1px solid #eef2f7 }
+.alphabet-table th, .alphabet-table td { padding: .6rem; border-bottom: 1px solid #eef2f7 }
+.table-center { text-align: center }
+
+/* Map embed on locations page */
+.map-wrap { width: 100%; height: 540px; border-radius: 12px; overflow: hidden; border: 1px solid #eef2f7; background: var(--surface); margin-bottom: 1.5rem }
+.map-wrap iframe { width: 100%; height: 100%; border: none; display: block }
+
+/* Footer */
+.footer { background: #0f1724; color: #fff; padding: 1.25rem 0 }
+.footer a { color: rgba(255,255,255,0.85) }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero { grid-template-columns: 1fr }
+  .form-row { grid-template-columns: 1fr }
+  .nav-links { display: none }
+  .map-wrap { height: 320px }
+  /* Stack request page panels on small screens */
+  .request-split { grid-template-columns: 1fr }
+  .panel-image-wrap { height: 200px }
+}
+
