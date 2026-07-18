@@ -4,357 +4,98 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Visual Aids - AssistAbility</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;1,400&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/style.css">
-    <script src="../javascript/navigation.js" defer></script>
+    <script src="../javascript/myjavascript.js"></script>
 </head>
-<body class="va-page">
+<body>
+    <nav>
 
-    <!-- Navbar -->
-    <nav class="navbar">
-        <div class="nav-inner">
-            <a href="../index.html" class="nav-logo">
-                <span class="logo-icon">♿</span>
-                AssistAbility
-            </a>
-            <button class="menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <ul class="nav-links">
-                <li><a href="../index.html" class="nav-link">Home</a></li>
-                <li><a href="location.html" class="nav-link">Locations</a></li>
-                <li><a href="visual aids.html" class="nav-link active">Visual aids</a></li>
-                <li><a href="support-guide.html" class="nav-link">How to Help</a></li>
-            </ul>
-            <a href="request.html" class="nav-cta">Request Help</a>
-        </div>
+    <div class="logo">
+        <a href="index.html"><span>AssistAbility</span></a>
+    </div>
+
+    <div class="menu">
+        <a href="index.html">Home</a>
+        <a href="pages/location.html">Locations</a>
+        <a href="pages/visual aids.html">Visual aids</a>
+        <a href="pages/support-guide.html">How to Help</a>
+        <a href="pages/request.html">Request Help</a>
+    </div>
+
     </nav>
 
-    <!-- Hero -->
-    <div class="va-hero">
-        <div class="va-hero-inner">
-            <span class="hero-badge">Learning Resources</span>
-            <h1 class="va-hero-title">
-                Visual <em>learning aids</em><br>for everyone
-            </h1>
-            <p class="va-hero-sub">
-                Video tutorials, sign language guides, and communication tools to help persons with disabilities and their supporters communicate more effectively.
-            </p>
+    <header>
+        <div>
+            <h1>Visual Learning Aids</h1>
+            <p>Video tutorials, sign language guides, and communication tools to help people communicate more effectively.</p>
         </div>
+    </header>
+
+    <main>
+
+<h2 style="text-align:center;">Visual Learning Resources</h2>
+<p style="text-align:center;">
+Learn, communicate, and stay inspired with these helpful videos.
+</p>
+
+<div class="videos">
+
+    <div class="video">
+        <h3>🤟 Learn Sign Language</h3>
+        <iframe width="400" height="250"
+        src="https://www.youtube.com/embed/k9cFqNYlV1A"
+        title="Sign Language"
+        allowfullscreen></iframe>
     </div>
 
-    <!-- Tab nav -->
-    <div class="va-tabs">
-        <div class="va-tabs-inner">
-            <a href="#videos" class="va-tab active">🎬 Video Resources</a>
-            <a href="#alphabet" class="va-tab">🤟 Sign Language Alphabet</a>
-        </div>
+    <div class="video">
+        <h3>🧑‍🦽 Accessible Exercises</h3>
+        <iframe width="400" height="250"
+        src="https://www.youtube.com/embed/X3-gKPNyrTA"
+        title="Exercises"
+        allowfullscreen></iframe>
     </div>
 
-    <!-- Main -->
-    <main class="va-main">
+    <div class="video">
+        <h3>❤️ Motivational Stories</h3>
+        <iframe width="400" height="250"
+        src="https://www.youtube.com/embed/ju9_gA8rNto"
+        title="Motivation"
+        allowfullscreen></iframe>
+    </div>
 
-        <!-- ── Video Section ── -->
-        <section class="va-section" id="videos">
-            <div class="va-section-header">
-                <p class="va-eyebrow">Video resources</p>
-                <h2 class="va-sec-title">Learn through watching</h2>
-                <p class="va-sec-sub">Curated videos covering sign language, assistive communication, and disability awareness.</p>
-            </div>
+    <div class="video">
+        <h3>💻 Assistive Technology</h3>
+        <iframe width="400" height="250"
+        src="https://www.youtube.com/embed/6iQrh2gK3uE"
+        title="Technology"
+        allowfullscreen></iframe>
+    </div>
 
-            <div class="video-grid">
+    <div class="video">
+        <h3>📚 Audio Stories</h3>
+        <iframe width="400" height="250"
+        src="https://www.youtube.com/embed/2K6JtJ4r3iQ"
+        title="Stories"
+        allowfullscreen></iframe>
+    </div>
 
-                <!-- 1 -->
-                <div class="video-card">
-                    <div class="video-embed-wrap">
-                        <iframe
-                            src="https://www.youtube.com/embed/0FcwzMq4iWg"
-                            title="ASL Alphabet – Sign Language for Beginners"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen
-                            loading="lazy">
-                        </iframe>
-                    </div>
-                    <div class="video-card-body">
-                        <span class="video-tag sign">Sign Language</span>
-                        <p class="video-title">ASL Alphabet – Sign Language for Beginners</p>
-                        <p class="video-desc">A clear, slow-paced walkthrough of every letter in the American Sign Language alphabet — perfect for first-time learners.</p>
-                    </div>
-                </div>
+    <div class="video">
+        <h3>🌿 Relaxation</h3>
+        <iframe width="400" height="250"
+        src="https://www.youtube.com/embed/ZToicYcHIOU"
+        title="Relaxation"
+        allowfullscreen></iframe>
+    </div>
 
-                <!-- 2 -->
-                <div class="video-card">
-                    <div class="video-embed-wrap">
-                        <iframe
-                            src="https://www.youtube.com/embed/v1desDduz5M"
-                            title="Learn Basic Sign Language in 20 minutes"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen
-                            loading="lazy">
-                        </iframe>
-                    </div>
-                    <div class="video-card-body">
-                        <span class="video-tag sign">Sign Language</span>
-                        <p class="video-title">Learn Basic Sign Language in 20 Minutes</p>
-                        <p class="video-desc">Covers greetings, numbers, and everyday phrases in sign language. Great for family members and caregivers of Deaf persons.</p>
-                    </div>
-                </div>
+</div>
 
-                <!-- 3 -->
-                <div class="video-card">
-                    <div class="video-embed-wrap">
-                        <iframe
-                            src="https://www.youtube.com/embed/Bgf61gVXkGs"
-                            title="Introduction to Braille – Reading with your fingers"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen
-                            loading="lazy">
-                        </iframe>
-                    </div>
-                    <div class="video-card-body">
-                        <span class="video-tag braille">Braille</span>
-                        <p class="video-title">Introduction to Braille</p>
-                        <p class="video-desc">Learn how the Braille system works — the six-dot cell, Grade 1 alphabet, and how visually impaired people read and write.</p>
-                    </div>
-                </div>
+</main>
 
-                <!-- 4 -->
-                <div class="video-card">
-                    <div class="video-embed-wrap">
-                        <iframe
-                            src="https://www.youtube.com/embed/Hu4Yvq-g7_Y"
-                            title="Disability Awareness – Understanding Different Disabilities"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen
-                            loading="lazy">
-                        </iframe>
-                    </div>
-                    <div class="video-card-body">
-                        <span class="video-tag guide">Awareness</span>
-                        <p class="video-title">Understanding Different Disabilities</p>
-                        <p class="video-desc">An accessible overview of physical, sensory, cognitive, and invisible disabilities — ideal for caregivers and community members.</p>
-                    </div>
-                </div>
-
-                <!-- 5 -->
-                <div class="video-card">
-                    <div class="video-embed-wrap">
-                        <iframe
-                            src="https://www.youtube.com/embed/Mhk1wEMiuNc"
-                            title="AAC – Augmentative and Alternative Communication"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen
-                            loading="lazy">
-                        </iframe>
-                    </div>
-                    <div class="video-card-body">
-                        <span class="video-tag comm">Communication</span>
-                        <p class="video-title">Augmentative &amp; Alternative Communication (AAC)</p>
-                        <p class="video-desc">Explains tools like picture boards, speech devices, and apps that help people with speech impairments communicate effectively.</p>
-                    </div>
-                </div>
-
-                <!-- 6 -->
-                <div class="video-card">
-                    <div class="video-embed-wrap">
-                        <iframe
-                            src="https://www.youtube.com/embed/q9s7PNgBfTw"
-                            title="How to communicate with a Deaf person"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen
-                            loading="lazy">
-                        </iframe>
-                    </div>
-                    <div class="video-card-body">
-                        <span class="video-tag sign">Deaf Culture</span>
-                        <p class="video-title">How to Communicate with a Deaf Person</p>
-                        <p class="video-desc">Practical tips on face-to-face communication, lip reading etiquette, writing notes, and respectful interaction with Deaf individuals.</p>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <div class="va-divider"></div>
-
-        <!-- ── Alphabet Section ── -->
-        <section class="va-section" id="alphabet">
-            <div class="va-section-header">
-                <p class="va-eyebrow">Sign language</p>
-                <h2 class="va-sec-title">The Sign Language Alphabet</h2>
-                <p class="va-sec-sub">All 26 letters of the manual alphabet (fingerspelling) used in International / American Sign Language.</p>
-            </div>
-
-            <div class="alphabet-intro">
-                <strong>What is fingerspelling?</strong> Fingerspelling is a way of spelling words using hand shapes that correspond to the letters of the written alphabet. It is used in sign language to spell out proper names, places, and words that have no established sign — and is the foundation every signer learns first.
-            </div>
-
-            <table class="alphabet-table">
-                <thead>
-                    <tr>
-                        <th class="table-center">Letter</th>
-                        <th class="table-center">Hand Sign</th>
-                        <th>Description</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td class="alpha-td-letter">A</td>
-                        <td class="alpha-td-img"><div class="alpha-td-img-wrap"><img src="assets/images/a.jpg" alt="Sign language letter A"></div></td>
-                        <td class="alpha-td-desc">Closed fist, thumb resting on the side</td>
-                    </tr>
-                    <tr>
-                        <td class="alpha-td-letter">B</td>
-                        <td class="alpha-td-img"><div class="alpha-td-img-wrap"><img src="assets/images/b.jpg" alt="Sign language letter B"></div></td>
-                        <td class="alpha-td-desc">Flat hand, four fingers together, thumb tucked in</td>
-                    </tr>
-                    <tr>
-                        <td class="alpha-td-letter">C</td>
-                        <td class="alpha-td-img"><div class="alpha-td-img-wrap"><img src="assets/images/c.jpg" alt="Sign language letter C"></div></td>
-                        <td class="alpha-td-desc">Curved hand forming a C shape</td>
-                    </tr>
-                    <tr>
-                        <td class="alpha-td-letter">D</td>
-                        <td class="alpha-td-img"><div class="alpha-td-img-wrap"><img src="assets/images/d.jpg" alt="Sign language letter D"></div></td>
-                        <td class="alpha-td-desc">Index finger points up, other fingers curve to meet thumb</td>
-                    </tr>
-                    <tr>
-                        <td class="alpha-td-letter">E</td>
-                        <td class="alpha-td-img"><div class="alpha-td-img-wrap"><img src="assets/images/e.jpg" alt="Sign language letter E"></div></td>
-                        <td class="alpha-td-desc">All fingers bent down to touch the palm</td>
-                    </tr>
-                    <tr>
-                        <td class="alpha-td-letter">F</td>
-                        <td class="alpha-td-img"><div class="alpha-td-img-wrap"><img src="assets/images/f.jpg" alt="Sign language letter F"></div></td>
-                        <td class="alpha-td-desc">Index and thumb form a circle, other three fingers point up</td>
-                    </tr>
-                    <tr>
-                        <td class="alpha-td-letter">G</td>
-                        <td class="alpha-td-img"><div class="alpha-td-img-wrap"><img src="assets/images/g.jpg" alt="Sign language letter G"></div></td>
-                        <td class="alpha-td-desc">Index finger and thumb point sideways, parallel to the ground</td>
-                    </tr>
-                    <tr>
-                        <td class="alpha-td-letter">H</td>
-                        <td class="alpha-td-img"><div class="alpha-td-img-wrap"><img src="assets/images/h.jpg" alt="Sign language letter H"></div></td>
-                        <td class="alpha-td-desc">Index and middle fingers held together, pointing sideways</td>
-                    </tr>
-                    <tr>
-                        <td class="alpha-td-letter">I</td>
-                        <td class="alpha-td-img"><div class="alpha-td-img-wrap"><img src="assets/images/i.jpg" alt="Sign language letter I"></div></td>
-                        <td class="alpha-td-desc">Pinky finger extended upward, other fingers closed</td>
-                    </tr>
-                    <tr>
-                        <td class="alpha-td-letter">J</td>
-                        <td class="alpha-td-img"><div class="alpha-td-img-wrap"><img src="assets/images/j.jpg" alt="Sign language letter J"></div></td>
-                        <td class="alpha-td-desc">Pinky up, then trace a J shape in the air</td>
-                    </tr>
-                    <tr>
-                        <td class="alpha-td-letter">K</td>
-                        <td class="alpha-td-img"><div class="alpha-td-img-wrap"><img src="assets/images/k.jpg" alt="Sign language letter K"></div></td>
-                        <td class="alpha-td-desc">Index and middle fingers up, thumb between them</td>
-                    </tr>
-                    <tr>
-                        <td class="alpha-td-letter">L</td>
-                        <td class="alpha-td-img"><div class="alpha-td-img-wrap"><img src="assets/images/l.jpg" alt="Sign language letter L"></div></td>
-                        <td class="alpha-td-desc">Thumb and index finger extended to form an L shape</td>
-                    </tr>
-                    <tr>
-                        <td class="alpha-td-letter">M</td>
-                        <td class="alpha-td-img"><div class="alpha-td-img-wrap"><img src="assets/images/m.jpg" alt="Sign language letter M"></div></td>
-                        <td class="alpha-td-desc">Three fingers folded over the thumb</td>
-                    </tr>
-                    <tr>
-                        <td class="alpha-td-letter">N</td>
-                        <td class="alpha-td-img"><div class="alpha-td-img-wrap"><img src="assets/images/n.jpg" alt="Sign language letter N"></div></td>
-                        <td class="alpha-td-desc">Two fingers folded over the thumb</td>
-                    </tr>
-                    <tr>
-                        <td class="alpha-td-letter">O</td>
-                        <td class="alpha-td-img"><div class="alpha-td-img-wrap"><img src="assets/images/o.jpg" alt="Sign language letter O"></div></td>
-                        <td class="alpha-td-desc">All fingers curve down to meet the thumb, forming an O</td>
-                    </tr>
-                    <tr>
-                        <td class="alpha-td-letter">P</td>
-                        <td class="alpha-td-img"><div class="alpha-td-img-wrap"><img src="assets/images/p.jpg" alt="Sign language letter P"></div></td>
-                        <td class="alpha-td-desc">K handshape rotated to point downward</td>
-                    </tr>
-                    <tr>
-                        <td class="alpha-td-letter">Q</td>
-                        <td class="alpha-td-img"><div class="alpha-td-img-wrap"><img src="assets/images/q.jpg" alt="Sign language letter Q"></div></td>
-                        <td class="alpha-td-desc">G handshape rotated to point downward</td>
-                    </tr>
-                    <tr>
-                        <td class="alpha-td-letter">R</td>
-                        <td class="alpha-td-img"><div class="alpha-td-img-wrap"><img src="assets/images/r.jpg" alt="Sign language letter R"></div></td>
-                        <td class="alpha-td-desc">Index and middle fingers crossed over each other</td>
-                    </tr>
-                    <tr>
-                        <td class="alpha-td-letter">S</td>
-                        <td class="alpha-td-img"><div class="alpha-td-img-wrap"><img src="assets/images/s.jpg" alt="Sign language letter S"></div></td>
-                        <td class="alpha-td-desc">Closed fist with thumb resting over the fingers</td>
-                    </tr>
-                    <tr>
-                        <td class="alpha-td-letter">T</td>
-                        <td class="alpha-td-img"><div class="alpha-td-img-wrap"><img src="assets/images/t.jpg" alt="Sign language letter T"></div></td>
-                        <td class="alpha-td-desc">Thumb tucked between the index and middle fingers</td>
-                    </tr>
-                    <tr>
-                        <td class="alpha-td-letter">U</td>
-                        <td class="alpha-td-img"><div class="alpha-td-img-wrap"><img src="assets/images/u.jpg" alt="Sign language letter U"></div></td>
-                        <td class="alpha-td-desc">Index and middle fingers held together, pointing upward</td>
-                    </tr>
-                    <tr>
-                        <td class="alpha-td-letter">V</td>
-                        <td class="alpha-td-img"><div class="alpha-td-img-wrap"><img src="assets/images/v.jpg" alt="Sign language letter V"></div></td>
-                        <td class="alpha-td-desc">Index and middle fingers spread apart, forming a V</td>
-                    </tr>
-                    <tr>
-                        <td class="alpha-td-letter">W</td>
-                        <td class="alpha-td-img"><div class="alpha-td-img-wrap"><img src="assets/images/w.jpg" alt="Sign language letter W"></div></td>
-                        <td class="alpha-td-desc">Index, middle, and ring fingers spread upward</td>
-                    </tr>
-                    <tr>
-                        <td class="alpha-td-letter">X</td>
-                        <td class="alpha-td-img"><div class="alpha-td-img-wrap"><img src="assets/images/x.jpg" alt="Sign language letter X"></div></td>
-                        <td class="alpha-td-desc">Index finger bent into a hook shape</td>
-                    </tr>
-                    <tr>
-                        <td class="alpha-td-letter">Y</td>
-                        <td class="alpha-td-img"><div class="alpha-td-img-wrap"><img src="assets/images/y.jpg" alt="Sign language letter Y"></div></td>
-                        <td class="alpha-td-desc">Thumb and pinky finger extended outward</td>
-                    </tr>
-                    <tr>
-                        <td class="alpha-td-letter">Z</td>
-                        <td class="alpha-td-img"><div class="alpha-td-img-wrap"><img src="assets/images/z.jpg" alt="Sign language letter Z"></div></td>
-                        <td class="alpha-td-desc">Index finger traces a Z shape in the air</td>
-                    </tr>
-                </tbody>
-            </table>
-
-            <div class="va-tip">
-                <strong>Practice tip:</strong> Start by learning A–E and practising daily in a mirror. Once comfortable, move to the next group. Most people can fingerspell their own name fluently within one week of daily 5-minute practice.
-            </div>
-        </section>
-
-    </main>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-inner">
-            <span class="footer-logo">♿ AssistAbility</span>
-            <p class="footer-text">Empowering inclusion through accessible learning resources.</p>
-            <div class="footer-links">
-                <a href="index.html">Home</a>
-                <a href="location.html">Locations</a>
-                <a href="visual aids.html">Visual aids</a>
-                <a href="request.html">Request Help</a>
-            </div>
+    <footer>
+        <div>
+            <p>Accessible learning resources · <a href="../index.html">Home</a></p>
         </div>
     </footer>
-
 </body>
 </html>

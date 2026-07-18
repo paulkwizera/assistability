@@ -1,135 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+    <head>
+        <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AssistAbility — Building an inclusive world</title>
-    <link rel="stylesheet" href="/css/style.css">
-    <script src="javascript/navigation.js" defer></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Serif+Display&display=swap" rel="stylesheet">
-</head>
+        <title>AssistAblity— Building an inclusive world</title>
+        <link rel="stylesheet" href="/css/style.css">
+        <script src="javascript/myjavascript.js"></script>
+    </head>
 <body>
+   <nav>
 
-    <!-- our top bar-->
-    <nav class="navbar" aria-label="Main navigation">
-        <div class="nav-inner">
-            <a href="index.html" class="nav-logo" aria-label="AssistAbility home">
-                <span class="logo-icon" aria-hidden="true">◈</span>
-                <span>AssistAbility</span>
-            </a>
-            <button class="menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <ul class="nav-links" role="list">
-                <li><a href="index.html" class="nav-link active" aria-current="page">Home</a></li>
-                <li><a href="pages/location.html" class="nav-link">Locations</a></li>
-                <li><a href="pages/visual aids.html" class="nav-link">Visual aids</a></li>
-                <li><a href="pages/support-guide.html" class="nav-link">How to Help</a></li>
-            </ul>
-            <a href="pages/request.html" class="nav-cta">Request Help</a>
-        </div>
-    </nav>
+    <div class="logo">
+        <a href="index.html"><span>AssistAbility</span></a>
+    </div>
 
-    <!-- Hero -->
-    <header class="hero" role="banner">
-        <div class="hero-inner">
-            <div class="hero-badge" aria-label="Tagline">Inclusion starts here</div>
-            <h1 class="hero-title">Everyone deserves<br>to be <em>seen</em> and <em>heard</em></h1>
-            <p class="hero-subtitle">
+    <div class="menu">
+        <a href="index.html">Home</a>
+        <a href="pages/location.html">Locations</a>
+        <a href="pages/visual aids.html">Visual aids</a>
+        <a href="pages/support-guide.html">How to Help</a>
+        <a href="pages/request.html">Request Help</a>
+    </div>
+
+</nav>
+    <header>
+        <div>
+            <div style="font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;font-size:x-large;">Inclusion starts here</div>
+            <h1>Everyone deserves<br>to be <em>seen</em> and <em>heard</em></h1>
+            <p>
                 AssistAbility connects people living with disabilities to the support, 
                 resources, and community they need to thrive.
             </p>
-            <div class="hero-actions">
-                <a href="pages/request.html" class="btn btn-primary">Request Help</a>
-                <a href="pages/visual aids.html" class="btn btn-secondary">Explore resources</a>
+            <div>
+                <button><a href="pages/request.html">Request Help</a></button>
+                <button><a href="pages/visual aids.html">Explore resources</a></button>
             </div>
         </div>
-        <div class="hero-image" aria-hidden="true">
-            <img src="assets/images/Photo Gallery_ The Power of Disability.jfif" alt="Person with disability participating in sport" loading="lazy">
+        <div>
+            <img src="assets/images/Photo Gallery_ The Power of Disability.jfif" alt="Person with disability participating in sport" height="500px" width="500px">
         </div>
     </header>
+    <section>
+        <div>
+            <h2>What we offer</h2>
+            <p>Simple, direct support for every need.</p>
 
-    <!-- What we offer -->
-    <section class="section" aria-labelledby="services-heading">
-        <div class="section-inner">
-            <h2 id="services-heading" class="section-title">What we offer</h2>
-            <p class="section-subtitle">Simple, direct support for every need.</p>
+            <div class="cards">
 
-            <div class="cards-grid" role="list">
-
-                <article class="card" role="listitem">
-                    <div class="card-icon" aria-hidden="true">🤝</div>
-                    <h3 class="card-title">Personal assistance</h3>
-                    <p class="card-body">Submit a request and connect with a trained support volunteer in your area. We match you based on your specific needs.</p>
-                    <a href="pages/request.html" class="card-link" aria-label="Request personal assistance">Request now →</a>
+                <article>
+                    <div>🤝</div>
+                    <h3>Personal assistance</h3>
+                    <p>Submit a request and connect with a trained support volunteer in your area. We match you based on your specific needs.</p>
+                    <a href="pages/request.html">Request now →</a>
                 </article>
 
-                <article class="card" role="listitem">
-                    <div class="card-icon" aria-hidden="true">🎵</div>
-                    <h3 class="card-title">Visual &amp; audio aids</h3>
-                    <p class="card-body">Access curated entertainment — sports, music, and media — designed and adapted for people with visual or hearing impairments.</p>
-                    <a href="pages/visual aids.html" class="card-link" aria-label="Browse visual aids">Explore aids →</a>
+                <article>
+                    <div>🎵</div>
+                    <h3>Visual &amp; audio aids</h3>
+                    <p>Access curated entertainment — sports, music, and media — designed and adapted for people with visual or hearing impairments.</p>
+                    <a href="pages/visual aids.html">Explore aids →</a>
                 </article>
 
-                <article class="card" role="listitem">
-                    <div class="card-icon" aria-hidden="true">🌍</div>
-                    <h3 class="card-title">Community support</h3>
-                    <p class="card-body">You are not alone. Our volunteer network is ready to listen, assist, and accompany you whenever you need a helping hand.</p>
-                    <a href="pages/request.html" class="card-link" aria-label="Join the community">Join us →</a>
+                <article>
+                    <div>🌍</div>
+                    <h3>Community support</h3>
+                    <p>You are not alone. Our volunteer network is ready to listen, assist, and accompany you whenever you need a helping hand.</p>
+                    <a href="pages/request.html">Join us →</a>
                 </article>
 
             </div>
         </div>
     </section>
 
-    <!-- Stats bar -->
-    <section class="stats-bar" aria-label="Our impact">
-        <div class="stats-inner">
-            <div class="stat">
-                <span class="stat-number" aria-label="1 billion people with disabilities worldwide">1B+</span>
-                <span class="stat-label">people live with a disability worldwide</span>
+    <section class="stats">
+        <div>
+            <div>
+                <span>1B+</span>
+                <span>people live with a disability worldwide</span>
             </div>
-            <div class="stat-divider" aria-hidden="true"></div>
-            <div class="stat">
-                <span class="stat-number" aria-label="Over 15 percent of the world's population">15%</span>
-                <span class="stat-label">of the global population</span>
+            <div>
+                <span>15%</span>
+                <span>of the global population</span>
             </div>
-            <div class="stat-divider" aria-hidden="true"></div>
-            <div class="stat">
-                <span class="stat-number" aria-label="All disabilities matter">All</span>
-                <span class="stat-label">disabilities are welcome here</span>
+            <div>
+                <span>All</span>
+                <span>disabilities are welcome here</span>
             </div>
         </div>
     </section>
-
-    <!-- Call to action -->
-    <section class="cta-section" aria-labelledby="cta-heading">
-        <div class="cta-inner">
-            <h2 id="cta-heading" class="cta-title">Ready to get involved?</h2>
-            <p class="cta-body">Whether you need assistance or want to offer support — there's a place for you here.</p>
-            <a href="pages/request.html" class="btn btn-primary btn-large">Get started today</a>
+    <section class="last">
+        <div>
+            <h2>Ready to get involved?</h2>
+            <p>Whether you need assistance or want to offer support — there's a place for you here.</p>
+            <a href="pages/request.html">Get started today</a>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer" role="contentinfo">
-        <div class="footer-inner">
-            <span class="footer-logo">◈ AssistAbility</span>
-            <p class="footer-text">Building a more inclusive world, one connection at a time.</p>
-            <nav aria-label="Footer navigation">
-                <ul class="footer-links" role="list">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="pages/visual aids.html">Visual aids</a></li>
-                    <li><a href="pages/support-guide.html">How to Help</a></li>
-                    <li><a href="pages/request.html">Request Help</a></li>
-                </ul>
+    <footer>
+        <div>
+            <p>Building a more inclusive world, one connection at a time.</p><br/>
+            <nav>
+                    <a href="index.html">Home</a>
+                    <a href="pages/visual aids.html">Visual aids</a>
+                    <a href="pages/support-guide.html">How to Help</a>
+                    <a href="pages/request.html">Request Help</a>
+                
             </nav>
         </div>
     </footer>
-
 </body>
 </html>

@@ -3,243 +3,179 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Support Locations - AssistAbility</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;1,400&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+    <title>Locations - AssistAbility</title>
     <link rel="stylesheet" href="/css/style.css">
-    <script src="../javascript/navigation.js" defer></script>
+    <script src="../javascript/myjavascript.js"></script>
 </head>
-<body class="locations-page">
+<body>
+    <nav>
 
-    <!-- Navbar -->
-    <nav class="navbar">
-        <div class="nav-inner">
-            <a href="../index.html" class="nav-logo">
-                <span class="logo-icon">♿</span>
-                AssistAbility
-            </a>
-            <button class="menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <ul class="nav-links">
-                <li><a href="../index.html" class="nav-link">Home</a></li>
-                <li><a href="location.html" class="nav-link active">Locations</a></li>
-                <li><a href="visual aids.html" class="nav-link">Visual aids</a></li>
-                <li><a href="support-guide.html" class="nav-link">How to Help</a></li>
-            </ul>
-            <a href="request.html" class="nav-cta">Request Help</a>
-        </div>
-    </nav>
-
-    <!-- Hero -->
-    <div class="locations-hero">
-        <div class="locations-hero-inner">
-            <span class="hero-badge">Rwanda · Kigali</span>
-            <h1 class="locations-hero-title">
-                Find <em>support near you</em><br>across Rwanda
-            </h1>
-            <p class="locations-hero-sub">
-                A directory of verified organisations and centres providing services for persons with disabilities — from advocacy and rehabilitation to education and health.
-            </p>
-        </div>
+    <div class="logo">
+        <a href="index.html"><span>AssistAbility</span></a>
     </div>
 
-    <!-- Main -->
-    <main class="locations-main">
+    <div class="menu">
+        <a href="../index.html">Home</a>
+        <a href="/pages/location.html">Locations</a>
+        <a href="/pages/visual aids.html">Visual aids</a>
+        <a href="/pages/support-guide.html">How to Help</a>
+        <a href="/pages/request.html">Request Help</a>
+    </div>
 
-        <!-- Map -->
-        <div class="loc-section-header">
-            <p class="loc-section-eyebrow">Interactive map</p>
-            <h2 class="loc-section-title">Locations in Kigali</h2>
-            <p class="loc-section-sub">All centres below are shown on the map. Click a pin for directions.</p>
+    </nav>
+
+    <header>
+        <div>
+            <h1>Support Locations</h1>
+            <p>Find verified organisations and centres offering services for persons with disabilities in Kigali.</p>
         </div>
+    </header>
+<main>
 
-        <div class="map-wrap">
-            <!-- Centred on Kigali; includes markers for all 6 orgs via embed -->
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m56!1m12!1m3!1d63762.35!2d30.0584!3d-1.9706!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m41!3e0!4m5!1s0x19dca7b811057b6b%3A0xea3614dec02f97c7!2sNUDOR%2C%20KK%2037%20Ave%2C%20Kigali!3m2!1d-1.9843125!2d30.1054848!4m5!1s0x19dca9ade2ba3819%3A0x7135fc1992638ad!2sRwanda%20National%20Union%20of%20the%20Deaf%2C%20KK%20227%20St%2C%20Kigali!3m2!1d-1.985867!2d30.1322565!4m5!1s0x19dca9690a6ce96b%3A0x81f7a94d3568a4f7!2sTubiteho%20NGO%2C%20Kigali!3m2!1d-2.03273!2d30.0945!4m5!1s0x19dca9bcc2e3f5ad%3A0x960a2c3f2323c88!2sUPHLS%2C%20Kigali!3m2!1d-1.9500643!2d30.0831897!4m5!1s0x19dca5a5b3c66031%3A0x0da79e1a736ecc!2sRwanda%20Union%20of%20the%20Blind%2C%20Kigali!3m2!1d-1.9463909!2d30.0941743!4m5!1s0x19dca7a2f48692c3%3A0xa8bcf26699c74f0f!2sUwezo%20Youth%20Empowerment%2C%20KG%20206%20St%2C%20Kigali!3m2!1d-1.9523728!2d30.1256094!5e0!3m2!1sen!2srw!4v1690000000000"
-                allowfullscreen=""
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
-                title="Map of disability support centres in Kigali, Rwanda"
-            ></iframe>
-        </div>
+<section>
+    <h2>Support Centres in Rwanda</h2>
 
-        <!-- Cards -->
-        <div class="loc-section-header">
-            <p class="loc-section-eyebrow">Directory</p>
-            <h2 class="loc-section-title">Support Organisations</h2>
-            <p class="loc-section-sub">6 verified centres and organisations across Kigali — open Mon–Fri</p>
-        </div>
+    <p>
+        Below are some organisations that provide services, advocacy,
+        education, rehabilitation, and community support for persons with
+        disabilities in Rwanda.
+    </p>
+</section>
 
-        <div class="loc-grid">
+<section>
 
-            <!-- NUDOR -->
-            <div class="loc-card">
-                <div class="loc-card-top">
-                    <div class="loc-icon-wrap blue">🏛️</div>
-                    <div>
-                        <p class="loc-name">NUDOR – National Union of Disability Organizations</p>
-                        <span class="loc-type umbrella">Umbrella / Advocacy</span>
-                    </div>
-                </div>
-                <div class="loc-divider"></div>
-                <div class="loc-meta">
-                    <div class="loc-meta-row"><span class="loc-meta-icon">📍</span><span>KK 37 Avenue, Kagarama, Kicukiro District, Kigali</span></div>
-                    <div class="loc-meta-row"><span class="loc-meta-icon">📞</span><span>+250 788 845 444</span></div>
-                    <div class="loc-meta-row"><span class="loc-meta-icon">🕐</span><span>Mon – Fri: 8:00 AM – 5:00 PM</span></div>
-                    <div class="loc-meta-row"><span class="loc-meta-icon">ℹ️</span><span>National umbrella body coordinating 8+ disability orgs. Advocacy, rights, and policy work across all 30 districts.</span></div>
-                </div>
-                <div class="loc-card-footer">
-                    <a class="loc-map-btn" href="https://maps.google.com/?q=NUDOR,KK+37+Ave,Kigali,Rwanda" target="_blank" rel="noopener">
-                        🗺️ Open in Maps
-                    </a>
-                </div>
-            </div>
+<h2>Interactive Map</h2>
 
-            <!-- RNUD -->
-            <div class="loc-card">
-                <div class="loc-card-top">
-                    <div class="loc-icon-wrap blue">👂</div>
-                    <div>
-                        <p class="loc-name">RNUD – Rwanda National Union of the Deaf</p>
-                        <span class="loc-type deaf">Deaf / Hearing</span>
-                    </div>
-                </div>
-                <div class="loc-divider"></div>
-                <div class="loc-meta">
-                    <div class="loc-meta-row"><span class="loc-meta-icon">📍</span><span>KK 401 St, Kagarama, Kicukiro District, Kigali</span></div>
-                    <div class="loc-meta-row"><span class="loc-meta-icon">📞</span><span>+250 788 209 212 / +250 788 433 444</span></div>
-                    <div class="loc-meta-row"><span class="loc-meta-icon">🌐</span><span>rnud.org &nbsp;·&nbsp; infornud2010@rnud.org</span></div>
-                    <div class="loc-meta-row"><span class="loc-meta-icon">🕐</span><span>Mon – Fri: 9:00 AM – 5:00 PM</span></div>
-                    <div class="loc-meta-row"><span class="loc-meta-icon">ℹ️</span><span>Established 1989. Sign language services, advocacy, and representation for Deaf Rwandans. Affiliated with the World Federation of the Deaf.</span></div>
-                </div>
-                <div class="loc-card-footer">
-                    <a class="loc-map-btn" href="https://maps.google.com/?q=Rwanda+National+Union+of+the+Deaf,Kicukiro,Kigali" target="_blank" rel="noopener">
-                        🗺️ Open in Maps
-                    </a>
-                </div>
-            </div>
+<p>Use the map below to locate disability support organisations in Kigali.</p>
 
-            <!-- Tubiteho -->
-            <div class="loc-card">
-                <div class="loc-card-top">
-                    <div class="loc-icon-wrap green">🧠</div>
-                    <div>
-                        <p class="loc-name">Tubiteho – Centre de Jour</p>
-                        <span class="loc-type mental">Mental &amp; Intellectual</span>
-                    </div>
-                </div>
-                <div class="loc-divider"></div>
-                <div class="loc-meta">
-                    <div class="loc-meta-row"><span class="loc-meta-icon">📍</span><span>Gahanga Sector, Kicukiro District, Kigali</span></div>
-                    <div class="loc-meta-row"><span class="loc-meta-icon">🌐</span><span>tubiteho.org</span></div>
-                    <div class="loc-meta-row"><span class="loc-meta-icon">ℹ️</span><span>Day centre for persons with mental and intellectual disabilities. Offers special education, health services, counselling, and anti-stigma advocacy.</span></div>
-                </div>
-                <div class="loc-card-footer">
-                    <a class="loc-map-btn" href="https://maps.google.com/?q=Tubiteho+NGO,Gahanga,Kicukiro,Kigali" target="_blank" rel="noopener">
-                        🗺️ Open in Maps
-                    </a>
-                </div>
-            </div>
+<div>
 
-            <!-- UPHLS -->
-            <div class="loc-card">
-                <div class="loc-card-top">
-                    <div class="loc-icon-wrap red">🏥</div>
-                    <div>
-                        <p class="loc-name">UPHLS – Umbrella of Disability Orgs for Health</p>
-                        <span class="loc-type health">Health &amp; HIV</span>
-                    </div>
-                </div>
-                <div class="loc-divider"></div>
-                <div class="loc-meta">
-                    <div class="loc-meta-row"><span class="loc-meta-icon">📍</span><span>Kigali (operates in 30 districts nationwide)</span></div>
-                    <div class="loc-meta-row"><span class="loc-meta-icon">📞</span><span>+250 788 344 553</span></div>
-                    <div class="loc-meta-row"><span class="loc-meta-icon">🌐</span><span>uphls.org</span></div>
-                    <div class="loc-meta-row"><span class="loc-meta-icon">ℹ️</span><span>Founded 2006. Focuses on HIV/AIDS prevention, inclusive health policies, and employability for persons with disabilities across Rwanda.</span></div>
-                </div>
-                <div class="loc-card-footer">
-                    <a class="loc-map-btn" href="https://maps.google.com/?q=UPHLS,Kigali,Rwanda" target="_blank" rel="noopener">
-                        🗺️ Open in Maps
-                    </a>
-                </div>
-            </div>
+<iframe
+src="https://www.google.com/maps/embed?pb=!1m56!1m12!1m3!1d63762.35!2d30.0584!3d-1.9706!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m41!3e0!4m5!1s0x19dca7b811057b6b%3A0xea3614dec02f97c7!2sNUDOR%2C%20KK%2037%20Ave%2C%20Kigali!3m2!1d-1.9843125!2d30.1054848!4m5!1s0x19dca9ade2ba3819%3A0x7135fc1992638ad!2sRwanda%20National%20Union%20of%20the%20Deaf!5e0!3m2!1sen!2srw"
+width="100%"
+height="450"
+style="border:0;"
+allowfullscreen=""
+loading="lazy">
+</iframe>
 
-            <!-- Rwanda Union of the Blind -->
-            <div class="loc-card">
-                <div class="loc-card-top">
-                    <div class="loc-icon-wrap amber">👁️</div>
-                    <div>
-                        <p class="loc-name">RUB – Rwanda Union of the Blind</p>
-                        <span class="loc-type blind">Visual Impairment</span>
-                    </div>
-                </div>
-                <div class="loc-divider"></div>
-                <div class="loc-meta">
-                    <div class="loc-meta-row"><span class="loc-meta-icon">📍</span><span>Kigali Poids Lourd Road, Kigali</span></div>
-                    <div class="loc-meta-row"><span class="loc-meta-icon">📞</span><span>+250 788 856 671</span></div>
-                    <div class="loc-meta-row"><span class="loc-meta-icon">🕐</span><span>Mon – Fri: 8:00 AM – 5:00 PM</span></div>
-                    <div class="loc-meta-row"><span class="loc-meta-icon">ℹ️</span><span>National organisation advocating for persons with visual impairments. Services include mobility support, Braille resources, and socioeconomic empowerment.</span></div>
-                </div>
-                <div class="loc-card-footer">
-                    <a class="loc-map-btn" href="https://maps.google.com/?q=Rwanda+Union+of+the+Blind,Kigali" target="_blank" rel="noopener">
-                        🗺️ Open in Maps
-                    </a>
-                </div>
-            </div>
+</div>
 
-            <!-- Uwezo -->
-            <div class="loc-card">
-                <div class="loc-card-top">
-                    <div class="loc-icon-wrap green">🤝</div>
-                    <div>
-                        <p class="loc-name">Uwezo Youth Empowerment</p>
-                        <span class="loc-type physical">Physical / Youth</span>
-                    </div>
-                </div>
-                <div class="loc-divider"></div>
-                <div class="loc-meta">
-                    <div class="loc-meta-row"><span class="loc-meta-icon">📍</span><span>39 KG 206 St, Gasabo District, Kigali</span></div>
-                    <div class="loc-meta-row"><span class="loc-meta-icon">📞</span><span>+250 783 285 228</span></div>
-                    <div class="loc-meta-row"><span class="loc-meta-icon">🕐</span><span>Mon – Fri: 8:00 AM – 5:00 PM</span></div>
-                    <div class="loc-meta-row"><span class="loc-meta-icon">ℹ️</span><span>Youth-focused empowerment centre supporting young persons with physical disabilities through vocational training and community integration.</span></div>
-                </div>
-                <div class="loc-card-footer">
-                    <a class="loc-map-btn" href="https://maps.google.com/?q=Uwezo+Youth+Empowerment,KG+206+St,Kigali" target="_blank" rel="noopener">
-                        🗺️ Open in Maps
-                    </a>
-                </div>
-            </div>
+</section>
 
-        </div>
+<section>
 
-        <!-- Info note -->
-        <div class="loc-info-banner">
-            <span class="loc-info-icon">ℹ️</span>
-            <p class="loc-info-text">
-                <strong>Need help outside Kigali?</strong> NUDOR and UPHLS operate programmes across all 30 districts of Rwanda. Contact NUDOR at <strong>+250 788 845 444</strong> to be connected to the nearest local organisation in your area. You can also <a href="request.html">submit a help request</a> and our team will follow up.
-            </p>
-        </div>
+<h2>Directory of Organisations</h2>
 
-    </main>
+<div class="cards">
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-inner">
-            <span class="footer-logo">♿ AssistAbility</span>
-            <p class="footer-text">Connecting persons with disabilities to support across Rwanda.</p>
-            <div class="footer-links">
-                <a href="index.html">Home</a>
+<div class="card">
+<h3>National Union of Disability Organizations of Rwanda (NUDOR)</h3>
+<p>
+Coordinates and represents disability organizations across Rwanda,
+promoting equal rights and inclusion.
+</p>
+<p><strong>Location:</strong> Niboye, Kicukiro, Kigali</p>
+<p><strong>Phone:</strong> +250 788 845 444</p>
+</div>
+
+<div class="card">
+<h3>Rwanda National Union of the Deaf (RNUD)</h3>
+<p>
+Provides sign language advocacy, education, and support services for
+deaf people and their families.
+</p>
+<p><strong>Location:</strong> Kagarama, Kicukiro, Kigali</p>
+<p><strong>Phone:</strong> +250 788 209 212</p>
+</div>
+
+<div class="card">
+<h3>Rwanda Union of the Blind (RUB)</h3>
+<p>
+Supports people with visual impairments through education,
+rehabilitation, advocacy, and employment programs.
+</p>
+<p><strong>Location:</strong> Kigali</p>
+<p><strong>Phone:</strong> +250 788 856 671</p>
+</div>
+
+<div class="card">
+<h3>UPHLS</h3>
+<p>
+Works to improve health, inclusion, employment, and well-being of
+persons with disabilities throughout Rwanda.
+</p>
+<p><strong>Location:</strong> Kimihurura, Kigali</p>
+</div>
+
+<div class="card">
+<h3>Tubiteho NGO</h3>
+<p>
+Supports children and adults with disabilities through education,
+healthcare, and community development projects.
+</p>
+<p><strong>Location:</strong> Kigali</p>
+</div>
+
+<div class="card">
+<h3>Rwanda Union of Little People (RULP)</h3>
+<p>
+Promotes equal opportunities and supports people with short stature
+through advocacy, education, and empowerment.
+</p>
+<p><strong>Location:</strong> Kimironko, Kigali</p>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>Services Available</h2>
+
+<ul>
+<li>♿ Physical rehabilitation</li>
+<li>🤟 Sign language education</li>
+<li>👨‍🦯 Support for people with visual impairments</li>
+<li>🦽 Wheelchair support services</li>
+<li>🎓 Inclusive education</li>
+<li>💼 Employment and vocational training</li>
+<li>❤️ Counselling and mental health support</li>
+<li>⚖ Disability rights advocacy</li>
+<li>🏥 Health promotion services</li>
+</ul>
+
+</section>
+
+<section>
+
+<h2>Need Help?</h2>
+
+<p>
+If you cannot find a nearby organisation, submit a request through
+AssistAbility and we will help connect you with the appropriate
+support service.
+</p>
+
+<button>
+<a href="request.html">Request Help</a>
+</button>
+
+</section>
+
+</main>
+
+    <footer>
+        <div>
+            <p>Connecting persons with disabilities to support across Rwanda.</p>
+            <nav>
+                <a href="../index.html">Home</a>
                 <a href="location.html">Locations</a>
                 <a href="visual aids.html">Visual aids</a>
                 <a href="request.html">Request Help</a>
-            </div>
+            </nav>
         </div>
     </footer>
-
 </body>
 </html>
