@@ -277,3 +277,16 @@ textarea{
 .card p{
     text-align:left;
 }
+.alphabetLesson{
+    text-align:center;
+    background:white;
+    width:350px;
+    margin:auto;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 0 10px lightgray;
+}
+
+.alphabetLesson img{
+    border-radius:10px;
+}
