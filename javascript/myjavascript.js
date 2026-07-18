@@ -13,6 +13,17 @@ function showLetter(){
 
     document.getElementById("signImage").src =
     "assets/images/" + letters[index] + ".jpg";
+    document.getElementById("progress").innerHTML =
+    "Letter " + (index + 1) + " of " + letters.length;
+
+    if(index == letters.length - 1){
+        document.getElementById("message").innerHTML =
+        "🎉 Congratulations! You have completed the Sign Language Alphabet!";
+    }
+    else{
+        document.getElementById("message").innerHTML = "";
+    }
+
 
 }
 
@@ -37,5 +48,6 @@ function previousLetter(){
         showLetter();
 
     }
+
 
 }
