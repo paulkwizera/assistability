@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login and Sign Up | AssistAbility</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <a href="../index.html"><span>AssistAbility</span></a>
+        </div>
+        <div class="menu">
+            <a href="../index.html">Home</a>
+            <a href="location.html">Locations</a>
+            <a href="visual-aids.html">Visual aids</a>
+            <a href="support-guide.html">How to Help</a>
+            <a href="request.html">Request Help</a>
+            <a href="login.html">Login</a>
+        </div>
+    </nav>
+
+    <header class="login-hero">
+        <div>
+            <p class="mini-title">Welcome</p>
+            <h1>Log in or sign up</h1>
+            <p>Create your account to connect with support, offer help, or access community resources.</p>
+        </div>
+    </header>
+
+    <main class="login-page">
+        <section class="role-card form-panel">
+            <div class="auth-toggle">
+                <button type="button" class="toggle-btn active" id="show-login">Login</button>
+                <button type="button" class="toggle-btn" id="show-signup">Sign Up</button>
+            </div>
+
+            <form class="form-box" id="auth-form">
+                <div id="login-section">
+                    <h2>Welcome back</h2>
+                    <p>Sign in to your account if you already joined AssistAbility.</p>
+                    <label>
+                        Email
+                        <input type="email" placeholder="you@example.com">
+                    </label>
+                    <label>
+                        Password
+                        <input type="password" placeholder="Enter password">
+                    </label>
+                    <button type="submit">Login</button>
+                </div>
+
+                <div id="signup-section" hidden>
+                    <h2>Create an account</h2>
+                    <p>New members can join as a volunteer or as someone needing support.</p>
+                    <label>
+                        Full Name
+                        <input type="text" placeholder="Your name">
+                    </label>
+                    <label>
+                        Email
+                        <input type="email" placeholder="you@example.com">
+                    </label>
+                    <label>
+                        Password
+                        <input type="password" placeholder="Create password">
+                    </label>
+                    <label>
+                        I am signing up as
+                        <select id="account-type">
+                            <option value="support">Person with disability / need support</option>
+                            <option value="volunteer">Volunteer</option>
+                        </select>
+                    </label>
+                    <label id="need-type-label">
+                        Need Type
+                        <select>
+                            <option>Visual support</option>
+                            <option>Mobility help</option>
+                            <option>Communication support</option>
+                            <option>Other</option>
+                        </select>
+                    </label>
+                    <button type="submit">Create Account</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="image-panel">
+            <img src="../assets/images/Photo Gallery_ The Power of Disability.jfif" alt="Community support illustration">
+        </section>
+    </main>
+
+    <script>
+        const showLoginBtn = document.getElementById('show-login');
+        const showSignupBtn = document.getElementById('show-signup');
+        const loginSection = document.getElementById('login-section');
+        const signupSection = document.getElementById('signup-section');
+        const accountType = document.getElementById('account-type');
+        const needTypeLabel = document.getElementById('need-type-label');
+
+        function showLogin() {
+            loginSection.hidden = false;
+            signupSection.hidden = true;
+            showLoginBtn.classList.add('active');
+            showSignupBtn.classList.remove('active');
+        }
+
+        function showSignup() {
+            loginSection.hidden = true;
+            signupSection.hidden = false;
+            showSignupBtn.classList.add('active');
+            showLoginBtn.classList.remove('active');
+        }
+
+        function updateSignupFields() {
+            if (accountType.value === 'volunteer') {
+                needTypeLabel.hidden = true;
+            } else {
+                needTypeLabel.hidden = false;
+            }
+        }
+
+        showLoginBtn.addEventListener('click', showLogin);
+        showSignupBtn.addEventListener('click', showSignup);
+        accountType.addEventListener('change', updateSignupFields);
+        updateSignupFields();
+    </script>
+</body>
+</html>

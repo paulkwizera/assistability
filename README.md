@@ -26,11 +26,10 @@ Contributions are welcome. To propose changes:
 2. Edit the relevant HTML/CSS files.
 3. Share changes or open a pull request with a short description of changes.
 
-## License
-This project includes a `LICENSE` file at the repository root. Please refer to it for license details.
 
 ## Contact
 For questions or suggestions, reach out to the project maintainers or leave notes in the project README.
+plus write to me on discord username:acecode7
 
 ---
 Thank you for supporting accessibility and inclusive design.
